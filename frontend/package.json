@@ -1,0 +1,6 @@
+{
+  "name":"acme-salary-management-ui","private":true,"version":"1.0.0","type":"module",
+  "scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","test":"vitest run"},
+  "dependencies":{"@emotion/react":"^11.13.3","@emotion/styled":"^11.13.0","@mui/icons-material":"^6.1.5","@mui/material":"^6.1.5","axios":"^1.7.7","react":"^18.3.1","react-dom":"^18.3.1"},
+  "devDependencies":{"@testing-library/jest-dom":"^6.6.3","@testing-library/react":"^16.0.1","@vitejs/plugin-react":"^4.3.3","jsdom":"^25.0.1","vite":"^5.4.10","vitest":"^2.1.4"}
+}
