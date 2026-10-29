@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: salary_management
+      POSTGRES_USER: salaryapp
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-SalaryApp@123}
+    ports: ["5432:5432"]
+    volumes: [salary-data:/var/lib/postgresql/data]
+volumes:
+  salary-data:
