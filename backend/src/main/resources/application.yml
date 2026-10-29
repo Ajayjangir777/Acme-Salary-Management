@@ -1,0 +1,33 @@
+server:
+  port: ${PORT:8080}
+spring:
+  # ---------- H2 (ACTIVE - for local testing) ----------
+  datasource:
+    url: ${DATABASE_URL:jdbc:h2:mem:salarydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE}
+    driver-class-name: org.h2.Driver
+    username: ${DATABASE_USERNAME:sa}
+    password: ${DATABASE_PASSWORD:}
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  # ---------- PostgreSQL (DISABLED - uncomment when Postgres is ready) ----------
+  # datasource:
+  #   url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/salary_management}
+  #   driver-class-name: org.postgresql.Driver
+  #   username: ${DATABASE_USERNAME:salaryapp}
+  #   password: ${DATABASE_PASSWORD:SalaryApp@123}
+  # h2:
+  #   console:
+  #     enabled: false
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate.jdbc.batch_size: 500
+      hibernate.order_inserts: true
+app:
+  seed-enabled: ${APP_SEED_ENABLED:true}
