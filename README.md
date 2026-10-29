@@ -1,6 +1,6 @@
 # ACME Salary Management
 
-Full-stack assessment starter: Spring Boot + PostgreSQL + React/Vite + Material UI.
+Full-stack assessment starter: Spring Boot + H2 Database (ACTIVE - for local testing)  PostgreSQL + React/Vite + Material UI.
 
 ## Run
 1. `docker compose up -d db`
